@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+        <title>Lattitude Dashboard</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.js" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <title>Weather Analysis Visualization</title>
+    </head>
+
+    <body style="background-color: lightgray">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- <div style="background-color: #0ab8a0;">
+                        <font size="6">
+                            <font color="white">
+                            <strong>Lattitude</strong>
+                            </font>
+                        </font>
+                    </div> -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" id="nav-title" href="index.html">Lattitude </a>
+                </div>
+
+                <div class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="temperature.html">Temperature</a>
+                                    </li>
+                                    <li>
+                                        <a href="humidity.html">Humidity</a>
+                                    </li>
+                                    <li>
+                                        <a href="cloudiness.html">Cloudiness</a>
+                                    </li>
+                                    <li>
+                                        <a href="windspeed.html">Wind Speed</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="comparison.html">Comparison</a></li>
+                            <li><a href="data.html">Data</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container">
+                    <div class="row">
+                            <div class="col-md-10" >
+                         <h1>Data</h1>
+                         <p>The following table includes all of the data used for plotting during this project.</p>
+                         <a href="data/cities.html"></a>
+                         <iframe src="data/cities.html" height="613" width="750"></iframe>
+                    </div>
+                </div>
+        
+            <div id="footer">
+                    <p class="m-0 text-center text-white">@Copyright Janna 2018</p>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Latitude Weather Analysis">
+  <meta name="author" content="Jason Lee">
+
+<!-- reset Style Sheets link -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+<!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+<!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.js"integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<!-- Javascript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- MY LINKS -->
+  <!-- Link to customized style sheet -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+  <title>Weather Analysis Visualization</title>
+  
+</head>
+
+<body style="background-color: lightgray">
+  <nav class="navbar navbar-default">
+    <div class="container">
+
+      <div class="navbar-header">
+        <div style="background-color: #0ab8a0;">
+          <!-- <font size="6">
+            <font color="white">
+              <strong>Lattitude</strong>
+            </font>
+          </font> -->
+        </div>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Nav Toggle</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" id="nav-title" href="index.html">Lattitude </a>
+      </div> <!-- navbar default only -->
+      
+      <div class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots
+                      <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li>
+                          <a href="temperature.html">Temperature</a>
+                      </li>
+                      <li>
+                          <a href="humidity.html">Humidity</a>
+                      </li>
+                      <li>
+                          <a href="cloudiness.html">Cloudiness</a>
+                      </li>
+                      <li>
+                          <a href="windspeed.html">Wind Speed</a>
+                      </li>
+                  </ul>
+              </li>
+              <li><a href="comparison.html">Comparison</a></li>
+              <li><a href="data.html">Data</a></li>
+          </ul>
+      </div>
+      <!-- .navbar-collapse -->
+    </div>
+    <!-- .container-fluid -->
+  </nav>
+  <div class="container">
+      <div class="row row-grid">
+          <div class="col-md-8">
+              <div class="box box-left">
+                  <h1>Summary: Latitude vs. X</h1>
+                  <hr>
+                  <section id="summary">
+                      <p> The main objective of this assignment was to determine the effect on weather as the latitudes approach the equator. Data was pulled from OpenWeatherMap API using a random sample of over 500 cities.</p>
+                        <br>
+                      <p> Using Python CitiPy library and OpenWeatherMapAPI, I got the weather for the cities (using the nearest lat-lng)
+                          and assembled a dataset of weather information for over 500 cities.
+                      </p>
+                        <br>
+                      <p> The data and plots are displayed on this website along with descriptions and possible explanations of any trends or correlations.</p>
+                        <br>
+                      </p>
+                  </section>    
+              </div>
+          </div>
+  
+          <div class="col-md-4">
+              <div class="box box-right">
+                  <h2>Visualizations</h2>
+                  <hr>
+                  <div class="row" >
+                      <div class="col-xs-6 col-sm-3 col-md-6">
+                          <a href="temperature.html">
+                              <img class = "img img-responsive" id="landing-viz" src="output_data/fig1.png" alt="Temperature by Latitude">
+                          </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-3 col-md-6">    
+                          <a href="cloudiness.html">
+                              <img class = "img img-responsive" id="landing-viz" src="output_data/fig3.png" alt="CLoudiness by Latitude">
+                          </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-3 col-md-6" > 
+                          <a href="humidity.html">
+                              <img class = "img img-responsive" id="landing-viz" src="output_data/fig2.png" alt="Humidity by Latitude">
+                          </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-3 col-md-6">    
+                          <a href="windspeed.html">
+                              <img class = "img img-responsive" id="landing-viz" src="output_data/fig4.png" alt="Wind Speed by Latitude">
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <!-- <main class="container">
+      <section style="background-color: white;" class="col-sm-12 col-md-6">
+        <div><font size="6"><font color="#0ab8a0"><strong>Summary: Lattitude VS. X</strong></font></font></div>
+        <p></p>
+        <br>
+        <p></p>
+        <section id="figure">
+          <img id="lat-img" class="col-sm-12 col-md-3-offset-1" src="output_data/fig1.png">
+          <img id="lat-img" class="col-sm-12 col-md-3-offset-1" src="output_data/fig2.png">
+        </section>  
+        <br>
+        <p>The main objective of this assignment was to determine the effect on weather as the latitudes approach the equator. Data was pulled from OpenWeatherMap API using a random sample of over 500 cities.</p><br>
+        <p>With this dataset, we were able to plot using matplotlib: lat vs. [temp, cloudiness, windspeed, humidity].</p><br>
+        <p>The data and plots are displayed on this website along with descriptions and possible explanations of any trends or correlations.</p><br>
+        </section>
+      </section>
+    </main> -->
+
+<!-- Footer -->
+    <br>
+    <div class="footer">
+      <p class="m-0 text-center text-white">@Copyright Janna 2018</p>
+    </div>
+</body>
+
+</html>
